@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #040714;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0) 90%,
+      rgba(4, 7, 20, 1)
+    ),
+    url(./bg_x.jpeg);
+  min-height: 80vh;
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro */
+  background-repeat: no-repeat;
+  margin-top: 30px;
+
+  padding: 64px 100px 64px 64px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.login__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.login__button {
+  color: silver;
+  background-color: rgba(4, 7, 20, 0.8);
+  width: 177px;
+  height: 50px;
+  font-size: 18px;
+  margin-top: -85px;
+  margin-right: -60px;
+  border: 1px solid silver;
+  transition: background-color 0.3s ease;
+  color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.login__button:focus {
+  background-color: #f9f9f9;
+  border-color: transparent;
+  transition: background-color 0.3s ease;
+  color: #040714;
+}
+.login__button:hover {
+  background-color: #f9f9f9;
+  border-color: transparent;
+  transition: background-color 0.3s ease;
+  color: #040714;
+}
+
+.header__main {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.header__main__logo {
+  width: 180px;
+  height: 98px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.text {
+  font-family: sans-serif;
+}
+
+.text-light {
+  color: #f9f9f9;
+}
+
+.header__main__actions {
+  background-color: transparent;
+  row-gap: 20px;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__main__actions__text {
+  font-size: 44px;
+  background-color: transparent;
+}
+
+.header__main__actions__button {
+  text-transform: uppercase;
+  background-color: #6421ff;
+  height: 68px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+}
+
+.header__main__actions__link {
+  font-size: 18px;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    background-image: url(./bg_y.jpeg);
+    margin-top: 0;
+    background-size: contain;
+    background-position: top;
+    min-height: 90vh;
+  }
+
+  .header__main {
+    padding-top: 50vw;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__main__actions {
+    width: 70%;
+  }
+
+  .header__main__actions__text {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .login__button {
+    margin-top: -55px;
+    margin-right: -60px;
+  }
+
+  .header__main__actions__link {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .header__main__actions {
+    width: 90vw;
+  }
+}
